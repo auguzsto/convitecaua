@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 86),
+                          padding: const EdgeInsets.only(top: 98),
                           child: Container(
                             color: Colors.blue,
                             width: size.width,
