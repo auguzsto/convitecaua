@@ -32,6 +32,8 @@ migrate_working_dir/
 .pub/
 /build/
 /lib/src/supabase/
+/lib/src/pages/key
+/lib/src/pages/invites_confirmed
 
 # Symbolication related
 app.*.symbols

@@ -1,6 +1,8 @@
 import 'package:convitecaua/src/constants/images.dart';
 import 'package:convitecaua/src/controllers/home_controller.dart';
 import 'package:convitecaua/src/pages/home/components/send.dart';
+import 'package:convitecaua/src/pages/key/key_page.dart';
+import 'package:convitecaua/src/pages/invites_confirmed/invites_confirmed_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      //Body
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -213,7 +216,16 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-            )
+            ),
+            GestureDetector(
+              onDoubleTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => KeyPage(),
+              )),
+              child: Container(
+                height: 50,
+                color: Colors.transparent,
+              ),
+            ),
           ],
         ),
       ),
