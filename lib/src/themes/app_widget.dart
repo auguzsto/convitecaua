@@ -1,6 +1,4 @@
 import 'package:convitecaua/src/pages/home/home_page.dart';
-import 'package:convitecaua/src/pages/key/key_page.dart';
-import 'package:convitecaua/src/pages/invites_confirmed/invites_confirmed_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
