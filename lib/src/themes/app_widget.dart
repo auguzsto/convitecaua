@@ -7,6 +7,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "2 anos do Cauã - Convite individual",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         buttonTheme: ButtonThemeData(

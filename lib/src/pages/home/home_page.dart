@@ -1,5 +1,6 @@
 import 'package:convitecaua/src/constants/images.dart';
-import 'package:convitecaua/src/pages/confirmed/confirmed_page.dart';
+import 'package:convitecaua/src/controllers/home_controller.dart';
+import 'package:convitecaua/src/pages/home/components/send.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -75,24 +76,73 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
-                      //Text
+                      //Title
                       Padding(
-                        padding: const EdgeInsets.all(12.0),
+                        padding: const EdgeInsets.only(left: 15, right: 15),
                         child: Wrap(
+                          spacing: 10,
                           children: [
                             Text(
-                              'Lorem ipsum',
-                              style: GoogleFonts.roboto(
-                                textStyle: const TextStyle(fontSize: 32),
+                              '2 anos do Cauã',
+                              style: GoogleFonts.pacifico(
+                                textStyle: const TextStyle(fontSize: 41),
                               ),
-                            ),
-                            Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                              style: GoogleFonts.roboto(),
                             ),
                           ],
                         ),
                       ),
+                      //Local
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        color: const Color.fromRGBO(237, 229, 216, 1),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: const [
+                            Text(
+                              "Local:",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Salão Quatro Estações, Estr. Paciência, Cosmos",
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      const SizedBox(height: 2),
+
+                      //Data
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        color: const Color.fromRGBO(237, 229, 216, 1),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: const [
+                            Text(
+                              "Data:",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "10 de junho ás 19:00, um sábadão",
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      //Text inside inivite
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        child: const Text(
+                            "Tudo bem com você? 08 de junho completo 2 anos de vida, gostaria que você participa-se da minha festinha para comemorar essa alegria comigo. Confirme a presença para meus pais saberem que podem contar com a sua presença. Valeu."),
+                      ),
+
+                      //Call dialog for data
                       GestureDetector(
                         onTap: () async {
                           setState(() {
@@ -100,12 +150,13 @@ class _HomePageState extends State<HomePage> {
                           });
 
                           await Future.delayed(
-                            const Duration(seconds: 3),
+                            const Duration(seconds: 1),
                             () async {
-                              await Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const ConfirmedPage(),
-                                ),
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return const SendDialog();
+                                },
                               );
                             },
                           );
@@ -114,10 +165,12 @@ class _HomePageState extends State<HomePage> {
                             isLoading = false;
                           });
                         },
+
+                        //Confirmed
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 98),
+                          padding: const EdgeInsets.only(top: 68),
                           child: Container(
-                            color: Colors.blue,
+                            color: const Color.fromRGBO(237, 229, 216, 1),
                             width: size.width,
                             height: 80,
                             child: Row(
@@ -126,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                 isLoading == false
                                     ? const Icon(
                                         Icons.card_giftcard_rounded,
-                                        color: Colors.white,
+                                        color: Color.fromARGB(230, 89, 53, 1),
                                         size: 25,
                                       )
                                     : const Center(
@@ -134,7 +187,8 @@ class _HomePageState extends State<HomePage> {
                                           width: 25,
                                           height: 25,
                                           child: CircularProgressIndicator(
-                                            color: Colors.white,
+                                            color:
+                                                Color.fromARGB(230, 89, 53, 1),
                                           ),
                                         ),
                                       ),
@@ -146,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                                   style: GoogleFonts.roboto(
                                     textStyle: const TextStyle(
                                       fontSize: 18,
-                                      color: Colors.white,
+                                      color: Color.fromARGB(230, 89, 53, 1),
                                     ),
                                   ),
                                 ),

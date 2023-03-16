@@ -1,19 +1,12 @@
 import 'package:convitecaua/src/constants/images.dart';
-import 'package:convitecaua/src/pages/home/components/send.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ConfirmedPage extends StatelessWidget {
-  ConfirmedPage({
-    super.key,
-    this.name,
-  });
-
-  String? name;
+class ErrorPage extends StatelessWidget {
+  const ErrorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       //Container background
       body: Container(
@@ -33,26 +26,26 @@ class ConfirmedPage extends StatelessWidget {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.green),
-                  color: Colors.green.shade50,
+                  border: Border.all(color: Colors.red),
+                  color: Colors.red.shade50,
                 ),
                 child: Column(
                   children: [
                     Text(
-                      "Presença confirmada.",
+                      "Ocorreu um problema.",
                       style: GoogleFonts.roboto(
                         textStyle: const TextStyle(
-                            color: Colors.green,
+                            color: Colors.red,
                             fontSize: 26,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
                     const Divider(),
                     Text(
-                      "Oi, $nameLabel, muito obrigado por se fazer presente nesse momento da minha vida. Meu papai pediu para avisar que não haverá bebiba alcoolíca no local, mas quem quiser tomar seu gelinho, pode levar, incluse ele já avisou minha mamãe que vai beber. Então, te encontro lá, valeu!",
+                      "Cara, o número do seu celular já foi confirmado. Tá com amnésia, doidão? kkkkkkkkk Qualquer coisa fala comigo ou com a Bruna. Tamo junto.",
                       style: GoogleFonts.roboto(
                         textStyle:
-                            const TextStyle(color: Colors.green, fontSize: 18),
+                            const TextStyle(color: Colors.red, fontSize: 18),
                       ),
                     ),
                     const SizedBox(height: 20),
