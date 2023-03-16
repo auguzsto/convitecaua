@@ -18,7 +18,7 @@ class AppWidget extends StatelessWidget {
           ),
         ),
       ),
-      home: ListInvitesConfirmedPage(),
+      home: const HomePage(),
     );
   }
 }
