@@ -49,7 +49,7 @@ class ConfirmedPage extends StatelessWidget {
                     ),
                     const Divider(),
                     Text(
-                      "Oi, $nameLabel, muito obrigado por se fazer presente nesse momento da minha vida. Meu papai pediu para avisar que não haverá bebiba alcoolíca no local, mas quem quiser tomar seu gelinho, pode levar, incluse ele já avisou minha mamãe que vai beber. Então, te encontro lá, valeu!",
+                      "Oi, $nameLabel, muito obrigado por se fazer presente nesse momento da minha vida. Meu papai pediu para avisar que não haverá bebiba alcoólica no local, mas quem quiser tomar seu gelinho, pode levar, incluse ele já avisou minha mamãe que vai beber. Então, te encontro lá, valeu!",
                       style: GoogleFonts.roboto(
                         textStyle:
                             const TextStyle(color: Colors.green, fontSize: 18),

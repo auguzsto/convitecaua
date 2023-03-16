@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         padding: const EdgeInsets.all(12),
                         child: const Text(
-                            "Tudo bem com você? 08 de junho completo 2 anos de vida, gostaria que você participa-se da minha festinha para comemorar essa alegria comigo. Confirme a presença para meus pais saberem que podem contar com a sua presença. Valeu."),
+                            "Tudo bem com você? 08 de junho completo 2 anos de vida, gostaria que você participasse da minha festinha para comemorar essa alegria comigo. Confirme a presença para meus pais saberem que podem contar com a sua presença. Valeu."),
                       ),
 
                       //Call dialog for data
