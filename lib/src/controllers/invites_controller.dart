@@ -2,7 +2,11 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 class InviteController {
   final supabase = Supabase.instance.client;
-  Stream<List> getConfirmed() {
-    return supabase.from('confirmed').stream(primaryKey: ['id']);
+  Future<List> getConfirmed() async {
+    return await supabase.from('confirmed').select('*');
+  }
+
+  Future<List> getConfirmedByName(String name) async {
+    return await supabase.from('confirmed').select('*').like('name', '%$name%');
   }
 }
