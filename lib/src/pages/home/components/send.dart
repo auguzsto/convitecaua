@@ -80,7 +80,6 @@ class _SendDialogState extends State<SendDialog> {
                               }
                             : null,
                     controller: controllers[index],
-                    keyboardType: index == 1 ? TextInputType.number : null,
                     inputFormatters:
                         index == 1 ? [utilService.maskFormatterPhone] : null,
                     decoration: InputDecoration(
