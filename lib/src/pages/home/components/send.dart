@@ -2,7 +2,6 @@ import 'package:convitecaua/src/controllers/home_controller.dart';
 import 'package:convitecaua/src/handlers/handlers_messages.dart';
 import 'package:convitecaua/src/pages/confirmed/confirmed_page.dart';
 import 'package:convitecaua/src/pages/error/error_page.dart';
-import 'package:convitecaua/src/pages/home/home_page.dart';
 import 'package:convitecaua/src/services/util_services.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -163,6 +162,5 @@ class _SendDialogState extends State<SendDialog> {
         ],
       ),
     );
-    ;
   }
 }
